@@ -26,7 +26,7 @@
   <a href="https://aerokube.com/selenoid/"><code><img width="5%" title="Selenoid" src="./images/icons/selenoid-logo.svg"></code>
   <a href="https://gradle.org/"><code><img width="5%" title="Gradle" src="./images/icons/gradle-logo.svg"></code>
   <a href="https://junit.org/junit5/"><code><img width="5%" title="JUnit5" src="./images/icons/junit5-logo.svg"></code>
-  <a href="https://github.com/allure-framework/allure2"><code><img width="5%" title="Allure Report" src="./images/icons/allure-Report-logo.svg"></code>
+  <a href="https://github.com/allure-framework/allure2"><code><img width="5%" title="Allure Report" src="images/icons/allure-report-logo.png"></code>
   <a href="https://qameta.io/"><code><img width="5%" title="Allure TestOps" src="./images/icons/allure-ee-logo.svg"></code>
   <a href="https://github.com/"><code><img width="5%" title="Github" src="./images/icons/github-mark.svg"></code>
   <a href="https://www.jenkins.io/"><code><img width="5%" title="Jenkins" src="./images/icons/jenkins-logo.svg"></code>
@@ -70,7 +70,7 @@ clean test
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
 
-## <img src="./images/icons/jenkins-logo.svg" title="Jenkins" width="4%"/> <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru20_hw15_test_project2/)</a>
+## <img src="./images/icons/jenkins-logo.svg" title="Jenkins" width="4%"/> <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru20_web_final_project/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screenshots/jenkins.png" width="950">
@@ -95,7 +95,7 @@ clean test
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
 
-# <img width="4%" style="vertical-align:middle" title="AllureReport" src="images/icons/allure-Report-logo.svg"> <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/qa_guru20_hw15_test_project2/5/allure/#)</a>
+# <img width="4%" style="vertical-align:middle" title="AllureReport" src="images/icons/allure-Report-logo.svg"> <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/qa_guru20_web_final_project/2/allure/)</a>
 
 ## Главная страница
 Главная страница отчета Allure содержит следующие блоки:
@@ -105,7 +105,7 @@ clean test
 >- <code><strong>*SUITES*</strong></code> - отображает распределение тестов по сьютам
 >- <code><strong>*CATEGORIES*</strong></code> - отображает распределение неудачных тестов по типам дефектов
 <p align="center">
-  <img src="images/screenshots/allure-report.png" width="950">
+  <img src="images/screenshots/allure-report-overview.png" width="950">
 </p>
 
 ## Список тестов с шагами и тестовыми артефактами
@@ -119,12 +119,12 @@ clean test
 >- Video
 
 <p align="left">
-  <img src="images/screenshots/allure-suites.png" alt="AllureResult" width="950">
+  <img src="images/screenshots/allure-report-suites.png" alt="AllureResult" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
 
-# <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="images/icons/allure-ee-logo.svg"> <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3631/dashboards)</a>
+# <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="images/icons/allure-ee-logo.svg"> <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3657/dashboards)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
@@ -138,13 +138,13 @@ clean test
 ## Allure TestOps Dashboard
 
 <p align="center">
-  <img src="images/screenshots/allure-testops-dashboard.png" alt="AllureTestOps" width="950">
+  <img src="images/screenshots/test-ops-dashboard.png" alt="AllureTestOps" width="950">
 </p>
 
 ## Allure TestOps Test Cases
 
 <p align="center">
-  <img src="images/screenshots/allure-testops-testcases.png" alt="AllureTestOpsTests" width="950">
+  <img src="images/screenshots/test-ops-test-cases.png" alt="AllureTestOpsTests" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
@@ -152,7 +152,7 @@ clean test
 # <img width="4%" style="vertical-align:middle" title="Jira" src="images/icons/jira-logo.svg"> <a>Интеграция с Jira</a>
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 <p align="center">
-  <img src="images/screenshots/jira.png" alt="JiraIntegration" width="950">
+  <img src="images/screenshots/jira-integration.png" alt="JiraIntegration" width="950">
 </p>
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
