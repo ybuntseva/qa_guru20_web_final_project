@@ -150,7 +150,7 @@ ${TASK}
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
 
-# <img width="4%" style="vertical-align:middle" title="Jira" src="images/icons/jira-logo.svg"> <a>Интеграция с Jira</a>
+# <img width="4%" style="vertical-align:middle" title="Jira" src="images/icons/jira-logo.svg"> <a>Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-860)</a>
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 <p align="center">
   <img src="images/screenshots/jira-integration.png" alt="JiraIntegration" width="950">
