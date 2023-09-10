@@ -53,12 +53,13 @@ gradle clean test
 
 ***Удалённый запуск через Jenkins:***
 ```bash  
-clean test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+clean 
+${TASK}
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${VERSION}
+-DscreenResolution=${RESOLUTION}
+-DbaseUrl=${BaseUrl}
+-DremoteUrl=${SELENOID}
 ```
 
 Дополнительные параметры:
