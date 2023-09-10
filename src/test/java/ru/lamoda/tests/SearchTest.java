@@ -2,12 +2,14 @@ package ru.lamoda.tests;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import ru.lamoda.pages.MainPage;
 import ru.lamoda.pages.SearchPage;
 
 import static io.qameta.allure.Allure.step;
 
 public class SearchTest extends TestBase {
 
+    MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 
     @CsvSource(value = {
@@ -18,7 +20,7 @@ public class SearchTest extends TestBase {
     void verifyDisplayedTextForItemsNotInList(String searchQuery, String expectedMessage) {
 
         step("", () ->
-                searchPage.sendSearchQuery(searchQuery));
+                mainPage.sendSearchQuery(searchQuery));
 
         step("", () ->
                 searchPage.checkItemNotFoundMessage(expectedMessage));

@@ -3,7 +3,8 @@ package ru.lamoda.tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.lamoda.pages.ItemsPage;
+import ru.lamoda.pages.ClothesTabPage;
+import ru.lamoda.pages.ItemCardPage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -11,7 +12,8 @@ public class AddItemsToFavoritesTest extends TestBase {
 
     String loginMessage = "Войдите, чтобы добавить в избранное";
 
-    ItemsPage itemsPage = new ItemsPage();
+    ClothesTabPage clothesTabPage = new ClothesTabPage();
+    ItemCardPage itemCardPage = new ItemCardPage();
 
     @DisplayName("Проверка отображаения модального окна с текстом \"Войдите, чтобы добавить в избранное\" " +
             "у неавторизованного пользователя при добавлении товара в Избранное")
@@ -20,15 +22,15 @@ public class AddItemsToFavoritesTest extends TestBase {
     void addItemToFavoritesByUnauthorizedUser() {
 
         step("Открыть карточку товара в разделе \"Одежда\"", () -> {
-            itemsPage.selectClothesSubTab();
+            clothesTabPage.selectClothesSubTab();
         });
 
         step("Нажать на иконку сердечка \"Добавить в Избранное\"", () -> {
-            itemsPage.addToFavorites();
+            clothesTabPage.addToFavorites();
         });
 
         step("Проверить, что отобразилось модальное окно с текстом \"Войдите, чтобы добавить в избранное\"", () -> {
-            itemsPage.checkAddToFavoriteModalHeader(loginMessage);
+            itemCardPage.checkAddToFavoriteModalHeader(loginMessage);
         });
     }
 }

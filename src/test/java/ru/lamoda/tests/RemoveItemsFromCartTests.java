@@ -3,7 +3,9 @@ package ru.lamoda.tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.lamoda.pages.ItemsPage;
+import ru.lamoda.pages.ClothesTabPage;
+import ru.lamoda.pages.ItemCardPage;
+import ru.lamoda.pages.CartPage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -11,7 +13,9 @@ public class RemoveItemsFromCartTests extends TestBase {
 
     String emptyCartMessage = "В корзине нет товаров";
 
-    ItemsPage itemsPage = new ItemsPage();
+    CartPage cartPage = new CartPage();
+    ClothesTabPage clothesTabPage = new ClothesTabPage();
+    ItemCardPage itemCardPage = new ItemCardPage();
 
     @DisplayName("Удаление товара из корзины")
     @Tag("removeFromCart")
@@ -19,27 +23,27 @@ public class RemoveItemsFromCartTests extends TestBase {
     void successfullyRemoveItemFromCart() {
 
         step("Открыть карточку товара в разделе \"Одежда\"", () -> {
-            itemsPage.selectClothesSubTab()
+            clothesTabPage.selectClothesSubTab()
                     .openItemCard();
         });
 
         step("Выбрать размер товара", () -> {
-            itemsPage.openSizeDropdownList()
+            itemCardPage.openSizeDropdownList()
                     .selectSize();
         });
 
         step("Добавить товар в корзину", () -> {
-            itemsPage.clickAddToCartButton()
+            itemCardPage.clickAddToCartButton()
                     .clickNavigateToCartButton();
         });
 
         step("Удалить товар из корзины", () -> {
-            itemsPage.hoverOverItemInfo()
+            cartPage.hoverOverItemInfo()
                     .clickDeleteItemFromCartButton();
         });
 
         step("Проверить, что товар удален из корзины", () -> {
-            itemsPage.checkEmptyCartTitle(emptyCartMessage);
+            cartPage.checkEmptyCartTitle(emptyCartMessage);
         });
     }
 }

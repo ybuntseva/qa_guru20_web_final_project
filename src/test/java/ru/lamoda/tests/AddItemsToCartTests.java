@@ -3,7 +3,9 @@ package ru.lamoda.tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.lamoda.pages.ItemsPage;
+import ru.lamoda.pages.ClothesTabPage;
+import ru.lamoda.pages.ItemCardPage;
+import ru.lamoda.pages.CartPage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -13,7 +15,9 @@ public class AddItemsToCartTests extends TestBase {
             cart = "Корзина",
             itemCount = "1 товар";
 
-    ItemsPage itemsPage = new ItemsPage();
+    CartPage cartPage = new CartPage();
+    ClothesTabPage clothesTabPage = new ClothesTabPage();
+    ItemCardPage itemCardPage = new ItemCardPage();
 
     @DisplayName("Проверка отображения модального окна с сообщением о добавлении товара в корзину")
     @Tag("cart")
@@ -21,21 +25,21 @@ public class AddItemsToCartTests extends TestBase {
     void successfullyAddItemsToCartModal() {
 
         step("Открыть карточку товара в разделе \"Одежда\"", () -> {
-            itemsPage.selectClothesSubTab()
+            clothesTabPage.selectClothesSubTab()
                     .openItemCard();
         });
 
         step("Выбрать размер товара", () -> {
-            itemsPage.openSizeDropdownList()
+            itemCardPage.openSizeDropdownList()
                     .selectSize();
         });
 
         step("Нажать на кнопку \"Добавить в корзину\"", () -> {
-            itemsPage.clickAddToCartButton();
+            itemCardPage.clickAddToCartButton();
         });
 
         step("Проверить, что отобразилось модальное окно с текстом \"Товар добавлен в корзину\"", () -> {
-            itemsPage.checkModalWindowAfterAddingItemToCart(itemAddedMessage);
+            itemCardPage.checkModalWindowAfterAddingItemToCart(itemAddedMessage);
         });
     }
 
@@ -45,22 +49,22 @@ public class AddItemsToCartTests extends TestBase {
     void checkItemDisplayedInCart() {
 
         step("Открыть карточку товара в разделе \"Одежда\"", () -> {
-            itemsPage.selectClothesSubTab()
+            clothesTabPage.selectClothesSubTab()
                     .openItemCard();
         });
 
         step("Выбрать размер товара", () -> {
-            itemsPage.openSizeDropdownList()
+            itemCardPage.openSizeDropdownList()
                     .selectSize();
         });
 
         step("Нажать на кнопку \"Добавить в корзину\"", () -> {
-            itemsPage.clickAddToCartButton()
+            itemCardPage.clickAddToCartButton()
                     .clickNavigateToCartButton();
         });
 
         step("Проверить, что в корзине отображается 1 товар", () -> {
-            itemsPage.checkTitleOfCartPage(cart)
+            cartPage.checkTitleOfCartPage(cart)
                     .checkItemCountInCart(itemCount);
         });
     }
@@ -72,16 +76,16 @@ public class AddItemsToCartTests extends TestBase {
     void addItemToCartWithoutSize() {
 
         step("Открыть карточку товара в разделе \"Одежда\"", () -> {
-            itemsPage.selectClothesSubTab()
+            clothesTabPage.selectClothesSubTab()
                     .openItemCard();
         });
 
         step("Нажать на кнопку \"Добавить в корзину\"", () -> {
-            itemsPage.clickAddToCartButton();
+            itemCardPage.clickAddToCartButton();
         });
 
         step("Проверить, что товар не добавлен, вместо этого открылся выпадающий список размеров", () -> {
-            itemsPage.checkSizeDropdownListVisible();
+            itemCardPage.checkSizeDropdownListVisible();
         });
     }
 }
