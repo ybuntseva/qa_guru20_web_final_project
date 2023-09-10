@@ -96,7 +96,7 @@ ${TASK}
 
 [Вернуться к оглавлению ⬆](#pushpin-содержание)
 
-# <img width="4%" style="vertical-align:middle" title="AllureReport" src="images/icons/allure-report-logo.png"> <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/qa_guru20_web_final_project/2/allure/)</a>
+# <img width="4%" style="vertical-align:middle" title="AllureReport" src="images/icons/allure-report-logo.png"> <a name="AllureReport">Результаты тестов в [Allure Report](https://jenkins.autotests.cloud/job/qa_guru20_web_final_project/allure/)</a>
 
 ## Главная страница
 Главная страница отчета Allure содержит следующие блоки:
