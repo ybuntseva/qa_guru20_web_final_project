@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования для компании Lamoda
 <p  align="center">
-<a href="https://www.lamoda.ru/"><img src="./images/icons/Lamoda_logo.svg" width="100"></a>
+<a href="https://www.lamoda.ru/"><img src="./images/icons/Lamoda_logo.svg" width="200"></a>
 </p>
 
 > Lamoda - один из крупнейших интернет-магазинов в России и СНГ. С 2014 по 2022 год входил в состав Global Fashion Group.
