@@ -9,8 +9,8 @@ import static com.codeborne.selenide.Selenide.$$;
 public class CitySelectionComponent {
 
     ElementsCollection
-            citiesList = $$("._citiesList_rq1gl_34 a"),
-            selectedCity = $$("._locationTitle_rq1gl_59");
+            citiesList = $$("._citiesList_1tu7k_34 a"),
+            selectedCity = $$("._locationTitle_1tu7k_59");
 
     public void selectCity(String value) {
         citiesList.find(text(value)).click();
