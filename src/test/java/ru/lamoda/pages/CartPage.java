@@ -13,7 +13,7 @@ public class CartPage {
             itemCount = $("._count_1uvko_20"),
             addedItemInfo = $("._root_t2t70_2"),
             deleteButton = $$(".x-button").find(text("Удалить")),
-            emptyCartTitle = $("._title_1wc5j_7");
+            emptyCartTitle = $("._title_k4g9v_9");
 
     public CartPage checkTitleOfCartPage(String value) {
         cart.shouldHave(text(value));

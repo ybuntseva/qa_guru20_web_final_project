@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 
 public class RemoveItemsFromCartTests extends TestBase {
 
-    String emptyCartMessage = "В корзине нет товаров";
+    String emptyCartMessage = "Корзина пока пустая";
 
     CartPage cartPage = new CartPage();
     ClothesTabPage clothesTabPage = new ClothesTabPage();
